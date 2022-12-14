@@ -2,6 +2,6 @@ Student name : Asif Shaikh
 Student Code : fw19_0502
 course : RCT101
 Project Code : glossy-walk-9868
-Project website : NordStorm
+Project website : NordStrom
 Project Mode : Individual Project
 Project Manager : IA Rahul
