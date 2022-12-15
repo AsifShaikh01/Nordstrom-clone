@@ -7,6 +7,9 @@ import Women from "./Women";
 import Beauty from "./Beauty";
 import Login from "./Login";
 import Cart from "./Cart";
+import Signin from "../Components/Signin";
+import Signup from "../Components/Signup";
+import PrivateRoute from '../Components/PrivateRoute';
 
 
 
@@ -19,8 +22,13 @@ const AllRoutes = () => {
             <Route path='/women' element={<Women/>}/>
             <Route path='/kid' element={<Kid/>}/>
             <Route path='/beauty' element={<Beauty/>}/>
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/cart' element={<Cart/>}/>
+            <Route path='/login' element={<Login/>}>
+               <Route index element={<Signin/>}/>
+               <Route  path='signin' element={<Signin/>}/>
+               <Route path='signup' element={<Signup/>}/>
+
+            </Route>
+            <Route path='/cart' element={<PrivateRoute><Cart/></PrivateRoute>}/>
 
         </Routes>
       
