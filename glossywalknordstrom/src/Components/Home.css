@@ -1,0 +1,16 @@
+.offers>div:nth-child(1){
+   text-align: center;
+   margin-top: 10px;
+   margin-bottom: 10px;
+ }
+.offers>div:nth-child(2)>img{
+   width: 95%;
+   margin-left: 2.5%;
+   
+}
+.offers>div:nth-child(3){
+    width: 97%;
+   display: flex;
+   justify-content: space-around;
+   margin-bottom: 15px;
+}

@@ -1,0 +1,16 @@
+.footerDiv{
+    display: flex;
+    justify-content: space-around;
+    background-color: #f9f9f9;
+    padding: 20px 10px;
+}
+.footerDiv>div>h4{
+    margin-bottom: 20px;
+}
+.footerDiv>div>p{
+    margin-bottom: 10px;
+}
+.footerDiv>div>div{
+    display: flex;
+    justify-content: space-between;
+}
