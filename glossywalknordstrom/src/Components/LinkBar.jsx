@@ -24,7 +24,7 @@ const LinkBar = () => {
         color:"black",
         textDecoration:"none"
     }
-    const activetStyle = {
+    const activeStyle = {
         color:"tomato",
         textDecoration:"underline"
     }
@@ -35,7 +35,7 @@ const LinkBar = () => {
                 <NavLink
                  key={link.path}
                  style={({isActive})=> isActive?
-                activetStyle : defaultStyle}
+                activeStyle : defaultStyle}
                  to={link.path}>
                     {link.text}
                     </NavLink>
