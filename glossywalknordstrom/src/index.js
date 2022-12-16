@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import {AuthContextProvider} from './Contexts/AuthContextProvider';
+import {ChakraProvider} from "@chakra-ui/react"
 
 import App from './App';
 
@@ -11,7 +12,10 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
    <AuthContextProvider>
+    <ChakraProvider>
     <App />
+    </ChakraProvider>
+   
     </AuthContextProvider>
     </BrowserRouter>
   </React.StrictMode>
