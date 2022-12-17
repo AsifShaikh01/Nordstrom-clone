@@ -17,8 +17,6 @@ const CartContextProvider = ({children}) => {
   }
   const initialState ={
     cart : getDataFromLS(),
-    
-    total_item : "",
     total_amount : ""
   }
   const [state , dispatch] = useReducer(reducer , initialState)
@@ -27,14 +25,22 @@ const CartContextProvider = ({children}) => {
      dispatch({type:"ADD_TO_CART", payload:{item}})
   }
 
-
-  console.log(state.cart)
+  const removeItem = (id)=>{
+     dispatch({type:"REMOVE_ITEM" ,payload:id})
+  }
+   
+  
+  const clearCart = ()=>{
+    dispatch({type:"CLEAR_CART"})
+ }
+  // console.log(state.cart)
 
   useEffect(()=>{
+    dispatch({type : "CART_TOTAL"});
    localStorage.setItem("cartItem" , JSON.stringify(state.cart))
   },[state.cart])
   return (
-   <CartContext.Provider value={{...state , addToCart}}>
+   <CartContext.Provider value={{...state , addToCart,removeItem ,clearCart}}>
     {children}
    </CartContext.Provider>
   )

@@ -19,6 +19,34 @@ const CartReducer = (state,action) => {
             cart : [...state.cart , cartProduct]
         }
     }
+    if(action.type === "REMOVE_ITEM"){
+        let updatedCart = state.cart.filter(
+            (el)=>el.id != action.payload)
+        return {
+            ...state,
+            cart : updatedCart
+        }
+    }
+    if(action.type === "CLEAR_CART"){
+        return {
+            ...state,
+            cart : []
+        }
+    }
+    if(action.type === "CART_TOTAL"){
+       let total_price = state.cart.reduce((initialVal , curElem) =>{
+        let {price} = curElem;
+
+        initialVal = initialVal + price;
+
+        return initialVal;
+       },0)
+
+       return {
+        ...state ,
+        total_amount  : total_price 
+       }
+    }
   return state
 }
 

@@ -5,7 +5,7 @@ const links = [
     {path:"/" , text:"Home"},
     {path:"/men" , text:"Men"},
     {path:"/women" , text:"Women"},
-    {path:"/kid" , text:"Kid"},
+    
     {path:"/beauty" , text:"Beauty"},
 ]
 const LinkBar = () => {
