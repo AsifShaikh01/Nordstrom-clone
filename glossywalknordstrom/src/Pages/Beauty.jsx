@@ -2,6 +2,8 @@ import React from 'react';
 import { useState , useEffect} from 'react';
 import axios from "axios";
 import Navbar from "../Components/Navbar"
+import { useContext } from 'react'
+import { CartContext } from '../Contexts/CartContextProvider'
 
 import {Container,Card,Image,Stack,Text,CardBody,Heading,Divider,CardFooter,ButtonGroup,Button ,Grid , GridItem} from "@chakra-ui/react";
 import LinkBar from '../Components/LinkBar';
@@ -9,6 +11,7 @@ import Footer from '../Components/Footer';
 
 const Beauty = () => {
   const [data , setData] = useState([]);
+  const {addToCart} = useContext(CartContext);
   const getData = () =>{
     return axios.get(`https://dummyjson.com/products/category/skincare`)
     .then((res)=>setData(res.data.products))
@@ -86,7 +89,7 @@ const Beauty = () => {
            </CardBody>
        
            <CardFooter>
-             <Button size="xs" variant='outline' colorScheme='yellow'>
+             <Button onClick={()=>addToCart(item)} size="xs" variant='outline' colorScheme='yellow'>
                Add to Cart
              </Button>
            </CardFooter>

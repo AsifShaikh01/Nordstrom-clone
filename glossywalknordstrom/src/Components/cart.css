@@ -1,0 +1,14 @@
+.cart{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid black;
+}
+.cart>img{
+    width: 100px;
+}
+.mainDiv{
+    width: 60%;
+    margin: auto;
+}

@@ -1,11 +1,16 @@
 import React from 'react'
+import {useState ,useEffect} from "react";
 import "../Components/Home.css"
 import Navbar from '../Components/Navbar'
 import Footer from "../Components/Footer"
 import LinkBar from '../Components/LinkBar'
+import axios from "axios";
 
 
 const Home = () => {
+  //  console.log(props.data)
+  
+  //  console.log(data)
   return (
     <div className='home'>
       <Navbar/>
