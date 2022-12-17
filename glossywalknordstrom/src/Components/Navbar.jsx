@@ -11,23 +11,14 @@ const Navbar = () => {
 
   const {state , signoutUser} = useContext(AuthContext);
 
-  const [query , setQuery] = useState("");
-  const [data ,setData] = useState([]);
- 
-  const  getData = (query) =>{
-    return axios.get(`https://dummyjson.com/products/search?q=${query}&limit=5`)
-    .then((res)=>setData(res.data))
-   }
-   console.log(data)
+  
   return (
     <div className='navbar'>
       <div>NORDSTROM</div>
       <div>
         <input
         type="text" 
-        value={query}
-        onChange = {(e)=>setQuery(e.target.value)}
-        onMouseEnter={()=>getData(query)}
+
         placeholder='search for products'/>
       </div>
       <div>
