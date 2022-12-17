@@ -1,7 +1,7 @@
 import React from 'react'
 import {Routes , Route} from "react-router-dom";
 import Home from "./Home";
-import Kid from "./Kid";
+
 import Men from "./Men";
 import Women from "./Women";
 import Beauty from "./Beauty";
@@ -13,6 +13,7 @@ import PrivateRoute from '../Components/PrivateRoute';
 
 
 
+
 const AllRoutes = () => {
   return (
     <div>
@@ -20,7 +21,7 @@ const AllRoutes = () => {
             <Route path='/' element={<Home/>}/>
             <Route path='/men' element={<Men/>}/>
             <Route path='/women' element={<Women/>}/>
-            <Route path='/kid' element={<Kid/>}/>
+            
             <Route path='/beauty' element={<Beauty/>}/>
             <Route path='/login' element={<Login/>}>
                <Route index element={<Signin/>}/>
@@ -28,7 +29,8 @@ const AllRoutes = () => {
                <Route path='signup' element={<Signup/>}/>
 
             </Route>
-            <Route path='/cart' element={<PrivateRoute><Cart/></PrivateRoute>}/>
+            <Route path='/cart' element={<Cart/>}/>
+            
 
         </Routes>
       
