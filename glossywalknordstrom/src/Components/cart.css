@@ -9,6 +9,19 @@
     width: 100px;
 }
 .mainDiv{
-    width: 60%;
+    width: 90%;
     margin: auto;
+    margin-bottom: 5px;
+  
+}
+
+.cartTotal{
+    border: 2px solid red;
+    width: 50%;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
 }
